@@ -1,6 +1,8 @@
 class PagesController < ApplicationController
   def home
   	@titre = "Accueil"
+  	root_path => '/'
+	root_url  => 'http://localhost:3000/'
   end
 
   def contact
@@ -9,8 +11,13 @@ class PagesController < ApplicationController
 
   def about
   	@titre = "A Propos"
+  	about_path => '/about'
+	about_url  => 'http://localhost:3000/about'
   end
   
   def help
+  	@titre = "Aide"
+  	help_path => '/help'
+	help_url  => 'http://localhost:3000/help'
   end
 end
